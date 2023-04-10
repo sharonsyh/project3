@@ -1,0 +1,82 @@
+CREATE table 3 string string bool emotion person Y/N
+INSERT INTO table 7 ROWS
+stressed students false
+busy office_hours true
+stressed students true
+stressed Paoletti true
+happy Darden true
+happy Sith true
+victorious Sith true
+INSERT INTO table 3 ROWS
+stressed students true
+busy office_hours false
+stressed students false
+INSERT INTO table 4 ROWS
+stressed students false
+busy office_hours true
+stressed students true
+stressed students true
+INSERT INTO table 6 ROWS
+busy office_hours true
+stressed students true
+stressed students false
+busy office_hours false
+stressed students true
+stressed students true
+PRINT FROM table 2 person emotion ALL
+GENERATE FOR table hash INDEX ON emotion
+PRINT FROM table 2 person emotion WHERE Y/N = true
+DELETE FROM 281class WHERE person = Darden
+GENERATE FOR table hash INDEX ON person
+DELETE FROM 281class WHERE person = Paoletti
+PRINT FROM table 2 person emotion WHERE Y/N = true
+GENERATE FOR table bst INDEX ON Y/N
+PRINT FROM table 2 person emotion WHERE Y/N = true
+INSERT INTO table 5 ROWS
+busy Alex false
+stressed Kevin true
+stressed Max true
+busy Bob true
+happy Levi true
+PRINT FROM table 2 person emotion WHERE Y/N = true
+REMOVE table
+CREATE table 3 string bool bool Name likes_cats? likes_dogs?
+INSERT INTO table 2 ROWS
+Sith true true
+Paoletti true false
+REMOVE table
+CREATE 281classA 3 string string bool emotion person Y/N
+INSERT INTO 281classA 15 ROWS
+happy Darden true
+stressed students false
+busy office_hours true
+stressed students true
+stressed Paoletti true
+happy Darden true
+happy Sith true
+victorious Sith true
+sad Darden true
+busy students false
+stressed office_hours false
+happy students true
+stressed Paoletti false
+happy Darden true
+happy Sith false
+CREATE 281classB 3 string string bool emotion person Y/N
+INSERT INTO 281classB 15 ROWS
+happy students false
+stressed office_hours false
+busy students true
+stressed Paoletti true
+stressed Darden true
+happy Sith true
+happy Sith true
+victorious Darden true
+happy students true
+stressed office_hours false
+busy students true
+stressed Paoletti true
+stressed Darden true
+happy Sith true
+happy Darden true
+QUIT

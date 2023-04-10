@@ -1,0 +1,17 @@
+CREATE test 2 int double integerr doublee
+INSERT INTO test 5 ROWS
+-11 -2.01
+-6 7.3
+-20 9.0
+10 -3.5
+2 -0.9
+PRINT FROM test 2 integerr doublee WHERE integerr < 0
+GENERATE FOR test bst INDEX ON integerr
+GENERATE FOR test hash INDEX ON doublee
+DELETE FROM test WHERE integerr > 0
+PRINT FROM test 2 integerr doublee WHERE integerr > 0
+PRINT FROM test 2 integerr doublee WHERE integerr > -12
+PRINT FROM test 1 integerr WHERE integerr = 1
+PRINT FROM test 2 integerr doublee ALL
+REMOVE test
+QUIT

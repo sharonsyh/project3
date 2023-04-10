@@ -1,0 +1,31 @@
+# test JOIN, GENERATE, REMOVE for double and int 
+CREATE foods 3 string double int name price numbers
+INSERT INTO foods 5 ROWS
+a 100.0 1
+b 200.0 2
+c 300.0 3
+d 400.0 4
+e 500.0 5
+GENERATE hash and bst for int after INSERT
+GENERATE FOR foods hash INDEX ON numbers
+GENERATE FOR foods bst INDEX ON numbers
+PRINT FROM foods 3 name numbers price ALL
+PRINT FROM foods 2 name numbers WHERE price < 200
+PRINT FROM foods 2 name numbers WHERE price > 200
+PRINT FROM foods 2 name numbers WHERE price = 200
+PRINT FROM foods 2 name price WHERE numbers < 1
+PRINT FROM foods 2 name price WHERE numbers > 4
+PRINT FROM foods 2 name price WHERE numbers = 3
+#UPDATE hash and bst after INSERT
+INSERT INTO foods 3 ROWS
+a 100.0 1
+f 200.0 2
+g 300.0 3
+PRINT FROM foods 3 name numbers numbers ALL
+PRINT FROM foods 2 name numbers WHERE numbers < 200
+PRINT FROM foods 2 name numbers WHERE numbers < 200
+PRINT FROM foods 2 name numbers WHERE numbers = 200
+PRINT FROM foods 2 name price WHERE numbers < 1
+PRINT FROM foods 2 name price WHERE numbers > 4
+PRINT FROM foods 2 name price WHERE numbers = 3
+QUIT

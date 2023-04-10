@@ -1,0 +1,28 @@
+CREATE 281class 3 string string bool emotion person Y/N
+GENERATE FOR 281class hash INDEX ON emotion
+GENERATE FOR 281class bst INDEX ON emotion
+INSERT INTO 281class 8 ROWS
+happy Darden false
+stressed students false
+busy office_hours true
+stressed students true
+stressed Paoletti true
+happy Darden true
+happy Sith false
+victorious Sith true
+#Do PRINT_WHERE = with hash
+PRINT FROM 281class 2 person emotion WHERE emotion = happy
+#Do PRINT_WHERE >< with hash
+PRINT FROM 281class 2 person emotion WHERE emotion < happy
+PRINT FROM 281class 2 person emotion WHERE emotion > happy
+#change hash to Do PRINT_WHERE = with bst
+GENERATE FOR 281class hash INDEX ON Y/N
+PRINT FROM 281class 2 person emotion WHERE emotion = happy
+GENERATE FOR 281class hash INDEX ON Y/N
+GENERATE FOR 281class bst INDEX ON Y/N
+DELETE FROM 281class WHERE person = Darden
+PRINT FROM 281class 3 person emotion Y/N ALL
+PRINT FROM 281class 3 person emotion Y/N WHERE Y/N > true
+PRINT FROM 281class 3 person emotion Y/N WHERE Y/N < true
+REMOVE 281class
+QUIT

@@ -1,0 +1,31 @@
+# join and generate
+CREATE table 4 string double int bool s d i b
+INSERT INTO table 5 ROWS
+s -2.1 -1 true
+st 2.4 1 true
+str 3.5 2 false
+stri 4.6 3 true
+strin 5.7 4 true
+CREATE table2 2 string double ss dd
+INSERT INTO table2 4 ROWS
+word4 3.5
+word3 2.4
+word2 4.6
+word1 5.7
+GENERATE FOR table2 bst INDEX ON dd
+JOIN table AND table2 WHERE s = ss AND PRINT 3 s 1 ss 2 dd 2
+JOIN table AND table2 WHERE d = dd AND PRINT 2 s 1 ss 2
+GENERATE FOR table2 hash INDEX ON dd
+JOIN table AND table2 WHERE s = ss AND PRINT 3 s 1 ss 2 dd 2
+JOIN table AND table2 WHERE d = dd AND PRINT 2 s 1 ss 2
+DELETE FROM table2 WHERE dd > 4
+JOIN table AND table2 WHERE d = dd AND PRINT 2 s 1 ss 2
+INSERT INTO table2 2 ROWS
+wordd 7.9
+word 8.1
+JOIN table AND table2 WHERE d = dd AND PRINT 2 s 1 ss 2
+INSERT INTO table2 2 ROWS
+wordd 3.5
+word 2.4 
+JOIN table AND table2 WHERE d = dd AND PRINT 2 s 1 ss 2
+QUIT

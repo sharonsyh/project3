@@ -1,0 +1,23 @@
+CREATE school 3 string double string student gpa year
+GENERATE FOR school hash INDEX ON year
+GENERATE FOR school bst INDEX ON gpa
+INSERT INTO school 2 ROWS
+Nick 3.9 senior
+Mark 3.1 senior
+INSERT INTO school 2 ROWS
+soph 0.01 freshman
+Lindsey 3.5 junior
+PRINT FROM school 1 gpa ALL
+GENERATE FOR school hash INDEX ON student
+PRINT FROM school 2 gpa year WHERE student = Mark
+DELETE FROM school WHERE gpa < 3.1
+CREATE copy 3 string double string student gpa year
+INSERT INTO school 4 ROWS
+Mark 3.1 senior
+Nick 3.9 senior
+Lindsey 3.5 junior
+soph 0.01 freshman
+JOIN school AND copy WHERE student = student AND PRINT 3 student 1 gpa 2 year 2
+REMOVE school
+REMOVE copy
+QUIT
